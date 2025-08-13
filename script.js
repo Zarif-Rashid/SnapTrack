@@ -25,6 +25,14 @@ function createChart(data) {
     const zValues = data.map(row => parseFloat(row.Z));
     const nValues = data.map(row => parseFloat(row.N));
     
+    // Calculate totals
+    const totalZ = zValues.reduce((sum, value) => sum + value, 0);
+    const totalN = nValues.reduce((sum, value) => sum + value, 0);
+    
+    // Update total displays
+    document.getElementById('totalZ').textContent = totalZ;
+    document.getElementById('totalN').textContent = totalN;
+    
     const chart = new Chart(ctx, {
         type: 'line',
         data: {
