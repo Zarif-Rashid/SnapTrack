@@ -34,8 +34,8 @@ function createChart(data) {
                     label: 'Z',
                     data: zValues,
                     // Z PLOT COLORS - Change these to modify Z plot appearance
-                    borderColor: 'rgb(59, 130, 246)',    // Z line color (currently blue)
-                    backgroundColor: 'rgba(59, 130, 246, 0.1)',  // Z fill color (currently light blue)
+                    borderColor: '#6488A4',    // Z line color (currently blue)
+                    backgroundColor: '#6488A4',  // Z fill color (currently light blue)
                     borderWidth: 3,
                     fill: false,
                     tension: 0
@@ -44,8 +44,8 @@ function createChart(data) {
                     label: 'N',
                     data: nValues,
                     // N PLOT COLORS - Change these to modify N plot appearance
-                    borderColor: 'rgb(236, 72, 153)',    // N line color (currently pink)
-                    backgroundColor: 'rgba(236, 72, 153, 0.1)',  // N fill color (currently light pink)
+                    borderColor: '#DEDFCD',    // N line color (currently pink)
+                    backgroundColor: '#DEDFCD',  // N fill color (currently light pink)
                     borderWidth: 3,
                     fill: false,
                     tension: 0
@@ -71,6 +71,9 @@ function createChart(data) {
                     labels: {
                         color: 'white'
                     }
+                },
+                tooltip: {
+                    enabled: false
                 }
             },
             scales: {
@@ -91,7 +94,7 @@ function createChart(data) {
                 y: {
                     title: {
                         display: true,
-                        text: 'Value',
+                        text: 'Snaps',
                         color: 'white'
                     },
                     grid: {
